@@ -2,8 +2,27 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Carousel from '@/components/Carousel'
+import Card from '@/components/Card'
+import { AiOutlineLeftCircle, AiOutlineRightCircle } from 'react-icons/ai'
+import Button from '@/components/Button'
+import Tile from '@/components/Tile'
+import tileData from '@/libs/TileData'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const nxt = () => {
+    let wd = document.getElementById('content').clientWidth
+    wd /= 2
+    document.getElementById('content').scrollLeft += wd
+    console.log('click')
+}
+
+const pre = () => {
+    let wd = document.getElementById('content').clientWidth
+    wd /= 2
+    document.getElementById('content').scrollLeft -= wd
+    console.log('click')
+}
 
 export default function Home() {
     return (
@@ -22,6 +41,71 @@ export default function Home() {
             </Head>
             <Navbar />
             <Carousel />
+            <div className="py-4 text-center leading-10">
+                <h1 className="text-4xl">Find it first on Indiegogo.</h1>
+                <h1>
+                    Indiegogo is where early adopters and innovation seekers
+                    find lively, imaginative tech before it hits the mainstream.
+                </h1>
+                <div className="mt-4">
+                    <Button solid> SIGN UP NOW</Button>
+                    <Button outline> LEARN MORE</Button>
+                </div>
+            </div>
+            <div className="relative flex w-full items-center justify-between px-4 md:px-20">
+                <AiOutlineLeftCircle
+                    size="60px"
+                    className="absolute left-16 z-10 hidden cursor-pointer sm:block lg:static lg:z-0"
+                    onClick={pre}
+                />
+                <div
+                    id="content"
+                    className="mx-4 flex h-[36rem] w-full overflow-scroll scroll-smooth py-8 scrollbar-hide"
+                >
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                </div>
+                <AiOutlineRightCircle
+                    size="60px"
+                    className="absolute right-16 z-10 hidden cursor-pointer sm:block lg:static lg:z-0"
+                    onClick={nxt}
+                />
+            </div>
+            <section
+                id="collection"
+                className="w-screen items-center px-4 lg:px-40"
+            >
+                <div className="grid w-full grid-cols-1 grid-rows-2 gap-6 py-10 lg:grid-cols-2">
+                    {tileData.map(({ key, image, title, subtitle }) => (
+                        <Tile
+                            key={key}
+                            image={image}
+                            title={title}
+                            subtitle={subtitle}
+                        />
+                    ))}
+                </div>
+                <div
+                    style={{
+                        backgroundImage: `url(https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fit,w_auto,g_center,q_auto:best,dpr_1.3,f_auto/homepage/cf-bg-desktop-lg.jpg)`,
+                    }}
+                    className="my-10 h-80 w-full bg-slate-900 bg-cover bg-no-repeat"
+                ></div>
+            </section>
         </>
     )
 }

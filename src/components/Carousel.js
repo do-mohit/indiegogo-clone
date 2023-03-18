@@ -1,7 +1,7 @@
 import carouselData from '../libs/carouselData'
 import { AiOutlineLeftCircle, AiOutlineRightCircle } from 'react-icons/ai'
 import { useState } from 'react'
-
+import Button from './Button'
 function Carousel() {
     const [currentIndex, changeIndex] = useState(0)
     const carSize = carouselData.length
@@ -20,25 +20,21 @@ function Carousel() {
                 <h1 className="font-bold leading-6"> live</h1>
                 <h1 className="leading-6"> live</h1>
                 <div className="mt-4 flex items-center">
-                    <button>
-                        <AiOutlineLeftCircle
-                            size="40px"
-                            onClick={() => {
-                                if (currentIndex == 0) changeIndex(carSize - 1)
-                                else changeIndex(currentIndex - 1)
-                            }}
-                        />
-                    </button>
-                    <button>
-                        <AiOutlineRightCircle
-                            size="40px"
-                            className="mx-2"
-                            onClick={() => {
-                                if (currentIndex == carSize - 1) changeIndex(0)
-                                else changeIndex(currentIndex + 1)
-                            }}
-                        />
-                    </button>
+                    <AiOutlineLeftCircle
+                        size="40px"
+                        onClick={() => {
+                            if (currentIndex == 0) changeIndex(carSize - 1)
+                            else changeIndex(currentIndex - 1)
+                        }}
+                    />
+                    <AiOutlineRightCircle
+                        size="40px"
+                        className="mx-2"
+                        onClick={() => {
+                            if (currentIndex == carSize - 1) changeIndex(0)
+                            else changeIndex(currentIndex + 1)
+                        }}
+                    />
                     <p className="mx-2 inline">
                         {currentIndex + 1} / {carSize}
                     </p>
