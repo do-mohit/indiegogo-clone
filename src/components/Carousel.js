@@ -1,10 +1,11 @@
 import carouselData from '../libs/carouselData'
 import { AiOutlineLeftCircle, AiOutlineRightCircle } from 'react-icons/ai'
 import { useState } from 'react'
-import Button from './Button'
+
 function Carousel() {
     const [currentIndex, changeIndex] = useState(0)
     const carSize = carouselData.length
+
     return (
         <section className="relative flex h-[36rem] w-full flex-col lg:h-[30rem]">
             <div
@@ -25,6 +26,7 @@ function Carousel() {
                         onClick={() => {
                             if (currentIndex == 0) changeIndex(carSize - 1)
                             else changeIndex(currentIndex - 1)
+                            // clearInterval(autoChange)
                         }}
                     />
                     <AiOutlineRightCircle
@@ -33,6 +35,7 @@ function Carousel() {
                         onClick={() => {
                             if (currentIndex == carSize - 1) changeIndex(0)
                             else changeIndex(currentIndex + 1)
+                            // clearInterval(autoChange)
                         }}
                     />
                     <p className="mx-2 inline">
