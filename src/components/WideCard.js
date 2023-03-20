@@ -1,7 +1,7 @@
 import Button from './Button'
 function WideCard() {
     return (
-        <div className="py-4 text-center">
+        <div className="py-8 text-center">
             <h1 className="text-4xl">Find it first on Indiegogo.</h1>
             <h1 className="my-4">
                 Indiegogo is where early adopters and innovation seekers find
