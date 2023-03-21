@@ -1,7 +1,16 @@
+import Image from 'next/image'
+
 function Card(props) {
     return (
         <div className="mx-2 h-full min-w-[16rem] rounded-sm bg-white outline outline-1 outline-gray-500 transition-all ease-in hover:scale-x-[1.01] hover:scale-y-[1.01] hover:shadow-md">
-            <img className="hidden w-full sm:block" src={props.image}></img>
+            <Image
+                id="cardimg"
+                className="hidden w-full sm:block"
+                src={props.image}
+                height={100}
+                width={100}
+                alt=""
+            />
             <div className="px-4 py-2 text-gray-600">
                 <h1 className="my-2 text-sm text-green-700">FUNDING</h1>
                 <div className="flex">
@@ -17,10 +26,13 @@ function Card(props) {
                             voluptatem molestiae neque.
                         </p>
                     </div>
-                    <img
+                    <Image
                         className="ml-1 block h-24 w-24 sm:hidden"
                         src={props.image}
-                    ></img>
+                        height={100}
+                        width={100}
+                        alt=""
+                    />
                 </div>
                 <p className="my-4">Category</p>
                 <div className="relative mb-4 h-3 max-w-xl overflow-hidden rounded-full">
