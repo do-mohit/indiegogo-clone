@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Carousel from '@/components/Carousel'
 import Card from '@/components/Card'
 import { AiOutlineLeftCircle, AiOutlineRightCircle } from 'react-icons/ai'
+import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
 import Tile from '@/components/Tile'
 import tileData from '@/libs/tileData'
 import iconTileData from '@/libs/iconTitleData'
@@ -11,8 +11,7 @@ import IconTile from '@/components/IconTile'
 import cardlData from '@/libs/cardData'
 import WideCard from '@/components/WideCard'
 import Button from '@/components/Button'
-
-const inter = Inter({ subsets: ['latin'] })
+import Footer from '@/components/Footer'
 
 const nxt = () => {
     let wd = document.getElementById('content').clientWidth
@@ -46,14 +45,14 @@ export default function Home() {
             <Navbar />
             <Carousel />
             <section className="w-screen px-4 lg:px-40">
-                <WideCard />
+                <WideCard top />
                 <section id="popular">
                     <div>
                         <h1 className="text-2xl">Popular Projects</h1>
                         <div className="relative flex items-center justify-between">
-                            <AiOutlineLeftCircle
+                            <BsArrowLeftCircle
                                 size="60px"
-                                className="absolute left-10 z-10 hidden cursor-pointer sm:block lg:-left-24 lg:z-0"
+                                className="absolute -top-12 right-20 z-10 hidden cursor-pointer sm:block lg:top-1/2 lg:-left-24 lg:z-0"
                                 onClick={pre}
                             />
                             <div
@@ -64,9 +63,9 @@ export default function Home() {
                                     <Card key={key} image={image} />
                                 ))}
                             </div>
-                            <AiOutlineRightCircle
+                            <BsArrowRightCircle
                                 size="60px"
-                                className="absolute right-10 z-10 hidden cursor-pointer sm:block lg:-right-24 lg:z-0"
+                                className="absolute right-0 -top-12 z-10 hidden cursor-pointer sm:block lg:top-1/2 lg:-right-24 lg:z-0"
                                 onClick={nxt}
                             />
                         </div>
@@ -89,7 +88,7 @@ export default function Home() {
                         }}
                         className="my-10 flex h-fit w-full items-center justify-center bg-slate-900 bg-cover bg-center bg-no-repeat py-16"
                     >
-                        <div className="md: w-3/4 px-10 md:w-2/3">
+                        <div className="px-10 md:w-2/3">
                             <h1 className="mb-8 text-center text-3xl">
                                 Back the project, take the ride
                             </h1>
@@ -130,6 +129,7 @@ export default function Home() {
                 </section>
                 <WideCard />
             </section>
+            <Footer />
         </>
     )
 }

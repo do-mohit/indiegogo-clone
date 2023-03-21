@@ -11,7 +11,7 @@ function Tile(props) {
                     {title}
                 </div>
             </div>
-            <div className="py-1 sm:flex sm:justify-between">
+            <div className="py-1 text-sm sm:flex sm:justify-between">
                 <h1>{subtitle}</h1>
                 <h1>SEE THE COLLECTION </h1>
             </div>

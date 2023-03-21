@@ -2,7 +2,7 @@ const tileData = [
     {
         key: 21,
         image: 'https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/f_auto/v1677536070/jdttdjavrwlrqkgznhxp.jpg',
-        title: '10 Cool & Clever Finds',
+        title: '10 Cool Finds',
         subtitle: 'Our roundup of standout projects',
     },
     {
