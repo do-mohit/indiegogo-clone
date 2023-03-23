@@ -1,4 +1,4 @@
-const tileData = [
+const colData = [
     {
         key: 21,
         image: 'https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/f_auto/v1677536070/jdttdjavrwlrqkgznhxp.jpg',
@@ -25,4 +25,4 @@ const tileData = [
     },
 ]
 
-export default tileData
+export default colData
