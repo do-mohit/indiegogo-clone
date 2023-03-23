@@ -9,7 +9,7 @@ import Button from '@/components/Button'
 import Footer from '@/components/Footer'
 import Tile from '@/components/Tile'
 import iconTileData from '@/libs/iconTitleData'
-import tileData from '@/libs/tileData'
+import colData from '@/libs/colData'
 import cardlData from '@/libs/cardData'
 import reviewData from '@/libs/reviewData'
 
@@ -73,7 +73,7 @@ export default function Home() {
                 </section>
                 <section id="collection">
                     <div className="grid w-full grid-cols-1 grid-rows-2 gap-6 py-10 lg:grid-cols-2">
-                        {tileData.map(({ key, image, title, subtitle }) => (
+                        {colData.map(({ key, image, title, subtitle }) => (
                             <Tile
                                 key={key}
                                 image={image}
@@ -83,6 +83,7 @@ export default function Home() {
                             />
                         ))}
                     </div>
+
                     <div
                         style={{
                             backgroundImage: `url(https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fit,w_auto,g_center,q_auto:best,dpr_1.3,f_auto/homepage/cf-bg-desktop-lg.jpg)`,
