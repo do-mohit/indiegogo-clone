@@ -44,7 +44,7 @@ export default function Home() {
             </Head>
             <Navbar />
             <Carousel />
-            <section className="w-screen px-4 lg:px-40">
+            <section className="w-screen px-4 sm:px-10 lg:px-40">
                 <WideCard top />
                 <section id="popular">
                     <div>
