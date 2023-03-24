@@ -1,7 +1,7 @@
 import Button from './Button'
 function WideCard(props) {
     return (
-        <div className="mb-2 py-8 text-center">
+        <div className="mb-4 py-10 text-center">
             <h1 className="text-3xl">
                 {props.top
                     ? 'Find it first on Indiegogo'

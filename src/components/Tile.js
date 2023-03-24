@@ -1,3 +1,4 @@
+import Link from 'next/link'
 function Tile(props) {
     const { image, title, subtitle, top } = props
     return (
@@ -18,8 +19,8 @@ function Tile(props) {
                 )}
             </div>
             <div className="py-1 text-sm sm:flex sm:justify-between">
-                <h1>{subtitle}</h1>
-                <h1>SEE THE COLLECTION </h1>
+                {top && <h1>{subtitle}</h1>}
+                <Link href="#!">{top ? 'SEE COLLECTION' : 'SEE MORE'}</Link>
             </div>
         </div>
     )
