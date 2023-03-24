@@ -2,18 +2,18 @@ function Footer() {
     return (
         <div className="w-screen bg-slate-50 px-4 py-10 lg:px-40">
             <ul className="sm:flex sm:justify-between">
-                <li>
+                <li className="mb-8">
                     <h1 className="text my-2 text-xl">EXPLORE</h1>
                     <ul>
                         <li>What We Do</li>
                         <li>Funding</li>
                     </ul>
                 </li>
-                <li>
+                <li className="mb-8">
                     <h1 className="my-2 text-xl">ABOUT</h1>
                     <ul>
                         <li>About Us</li>
-                        <li>BLog</li>
+                        <li>Blog</li>
                         <li>Trust & Safety</li>
                         <li>Help & Support</li>
                         <li>Press</li>
@@ -21,7 +21,7 @@ function Footer() {
                         <li>Contact</li>
                     </ul>
                 </li>
-                <li>
+                <li className="mb-8">
                     <h1 className="my-2 text-xl"> Entrepreneurs</h1>
                     <ul>
                         <li>How It Works</li>
