@@ -1,0 +1,5 @@
+export {default as cardData} from './cardData'
+export {default as carouselData} from './carouselData'
+export {default as iconTileData} from './iconTitleData'
+export {default as colData} from './colData'
+export {default as reviewData} from './reviewData'

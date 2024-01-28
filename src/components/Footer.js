@@ -14,7 +14,7 @@ function FooterLink({ children }) {
 function Footer() {
     return (
         <>
-            <div className="w-screen bg-slate-50 px-4 pt-10 md:flex md:flex-row-reverse md:items-center md:justify-between lg:px-40">
+            <div className="w-full bg-slate-50 px-4 pt-10 md:flex md:flex-row-reverse md:items-center md:justify-between lg:px-40">
                 <Contact />
                 <hr className="my-8 h-[0.1rem] bg-gray-400" />
                 <ul className="md:flex md:items-start">
