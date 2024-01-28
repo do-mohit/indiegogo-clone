@@ -1,17 +1,7 @@
 import Head from 'next/head'
-import Navbar from '@/components/Navbar'
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
-import Carousel from '@/components/Carousel'
-import Card from '@/components/Card'
-import IconTile from '@/components/IconTile'
-import WideCard from '@/components/WideCard'
-import Button from '@/components/Button'
-import Footer from '@/components/Footer'
-import Tile from '@/components/Tile'
-import iconTileData from '@/libs/iconTitleData'
-import colData from '@/libs/colData'
-import cardlData from '@/libs/cardData'
-import reviewData from '@/libs/reviewData'
+import { Carousel, Card, IconTile, WideCard, Button, Tile } from '@/components'
+import {iconTileData, colData, cardData, reviewData} from '@/libs';
 
 const nxt = () => {
     let wd = document.getElementById('content').clientWidth
@@ -42,9 +32,8 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Navbar />
             <Carousel />
-            <section className="w-screen px-4 sm:px-10 lg:px-40">
+            <section className="w-full px-4 sm:px-10 lg:px-40">
                 <WideCard top />
                 <section id="popular">
                     <div>
@@ -59,7 +48,7 @@ export default function Home() {
                                 id="content"
                                 className="flex  w-full overflow-scroll scroll-smooth px-[0.14rem] py-8 scrollbar-hide"
                             >
-                                {cardlData.map(({ key, image }) => (
+                                {cardData.map(({ key, image }) => (
                                     <Card key={key} image={image} />
                                 ))}
                             </div>
@@ -152,7 +141,6 @@ export default function Home() {
                 </section>
                 <WideCard />
             </section>
-            <Footer />
         </>
     )
 }
