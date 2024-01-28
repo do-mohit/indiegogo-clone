@@ -52,7 +52,7 @@ function Navbar() {
                 </nav>
             )}
             {isOpen && (
-                <nav className="flex h-16 w-screen items-center gap-6 bg-slate-50 px-4 py-4 shadow-md">
+                <nav className="flex h-16 w-full items-center gap-6 bg-slate-50 px-4 py-4 shadow-md">
                     <FaSistrix size="22px" />
                     <input
                         type="text"
