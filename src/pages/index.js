@@ -7,14 +7,12 @@ const nxt = () => {
     let wd = document.getElementById('content').clientWidth
     wd /= 2
     document.getElementById('content').scrollLeft += wd
-    console.log('click')
 }
 
 const pre = () => {
     let wd = document.getElementById('content').clientWidth
     wd /= 2
     document.getElementById('content').scrollLeft -= wd
-    console.log('click')
 }
 
 export default function Home() {
